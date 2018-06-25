@@ -19,8 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100; }
 
 body {
-  font-family: 'Exo 2', sans-serif;
-  height: 19517px; }
+  font-family: 'Exo 2', sans-serif; }
 
 input, a {
   outline: none; }
@@ -35,7 +34,8 @@ input, a {
 
 #header-wrap {
   width: 100%;
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5; }
 
 #header {
   width: 1185px;
@@ -44,7 +44,7 @@ input, a {
   display: block; }
   #header li {
     display: block;
-    height: 48px;
+    height: 46px;
     width: 171px;
     float: left;
     margin-top: 50px;
@@ -109,5 +109,8 @@ input, a {
     align-items: flex-start; }
     #nav ul :nth-child(1) {
       margin-left: 50px; }
-    #nav ul :nth-child(13) {
+    #nav ul :nth-child(3) {
+      color: #999999;
+      font-weight: 200; }
+    #nav ul :nth-child(14) {
       margin-right: 50px; }

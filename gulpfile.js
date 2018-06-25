@@ -51,6 +51,7 @@ gulp.task("scripts",function(){
 	gulp.src('js/jquery-1.11.0.js')
 	//.pipe(concat('verdor.js'))
 	//.pipe(gulp.dest('dist/js'))
+	//.pipe(babel({"presets":["es2015"]}))
 	.pipe(uglify())
 	.pipe(rename('jQuery.min.js'))
 	.pipe(gulp.dest('dist/js'))
