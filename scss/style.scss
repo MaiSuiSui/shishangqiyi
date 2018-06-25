@@ -1,5 +1,5 @@
 //----------------------------------首页内容区---------------------------------
-#center-wrap,#product-wrap{
+#center-wrap,#product-wrap，#detail-wrap{
     width:100%;
     background: white;
 }
@@ -206,7 +206,6 @@
 }
 #product-one{
     height:1177px;
-    background: peachpuff;
     caption{
             width:1200;
             height: 59px;
@@ -298,3 +297,10 @@
         }
     }
 }
+//----------------------------------商品详情页---------------------------------
+#detail-wrap{
+    height:4000px;
+}
+
+
+
