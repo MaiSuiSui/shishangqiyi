@@ -1,0 +1,191 @@
+//----------------------------------首页内容区---------------------------------
+#center-wrap{
+    margin:0 auto;
+    width:100%;
+    background: white;
+    height:19222px;
+}
+#center-clothing,#center-cosmetics,#center-bast,#center-four{
+    margin:0 auto;
+}
+//center-clothing
+#center-clothing{
+        width:1200px;
+        height:2245px;
+        background: white;
+        display: block;
+        border-collapse: separate;
+        border-spacing: 2px;
+        caption{
+            width:1200;
+            height: 59px;
+            font-weight: 500;
+            padding-top:50px;
+            font-size:24px;
+            font-family: 'Exo 2', sans-serif;
+        }
+        tr{
+            width:1200px;
+            height:534px;
+            border: 1px solid #000000;
+        }
+        td{
+            width:300px;
+            height:534px;
+            vertical-align:top;
+           img{
+                display:inline-block;
+                width: 290px;
+                height: 380px;
+            }
+            p{
+                padding-top:10px;
+                width:240px;
+                font-size: 12px;
+                overflow: hidden;
+                span{
+                    display: block;
+                    font-weight: 600;
+                    padding-top: 3px;
+                    font-size: 24px;
+                }
+            }
+        }
+        }
+       
+ // #center-cosmetics      
+#center-cosmetics{
+    width:1200px;
+    height:973px;
+    background: white;
+    display: block;
+    border-collapse: separate;
+    border-spacing: 2px;
+    
+    caption{
+        height: 49px;
+        font-weight: 500;
+        padding-top:40px;
+        font-size:24px;
+        font-family: 'Exo 2', sans-serif;
+        }
+    tr{
+        height:442px;
+        td{
+          height:302px;
+          width:252px;
+          vertical-align:top;
+          padding:20px 20px 0px 28px;
+          border: 1px solid #e5e5e5;
+          img{
+              display: block;
+              width:240px;
+              height: 240px;
+          }
+          p{
+            padding-top:10px;
+            width:240px;
+            font-size: 12px;
+            overflow: hidden;
+            span{
+            display: block;
+            font-weight: 600;
+            padding-top: 3px;
+            font-size: 20px;
+            }  
+          }  
+        }
+    }
+}
+
+//#center-bast
+#center-bast{
+        width:1200px;
+        height:13449px;
+        background: pink;
+        display: block;
+        border-collapse: separate;
+        border-spacing: 2px;
+        caption{
+            width:1200;
+            height: 59px;
+            font-weight: 500;
+            padding-top:50px;
+            font-size:24px;
+            font-family: 'Exo 2', sans-serif;
+        }
+        tr{
+            width:1200px;
+            height:534px;
+            border: 1px solid #000000;
+        }
+        td{
+            width:300px;
+            height:534px;
+            vertical-align:top;
+           img{
+                display:inline-block;
+                width: 290px;
+                height: 380px;
+            }
+            p{
+                padding-top:10px;
+                width:240px;
+                font-size: 12px;
+                overflow: hidden;
+                span{
+                    display: block;
+                    font-weight: 600;
+                    padding-top: 3px;
+                    font-size: 24px;
+                }
+            }
+        }
+        
+}
+//#center-four 
+#center-four{
+    width:1200px;
+    height:2299px;
+    background: palegreen;
+    display: block;
+    border-collapse: separate;
+    border-spacing: 2px;
+    
+    caption{
+        height: 49px;
+        font-weight: 500;
+        padding-top:40px;
+        font-size:24px;
+        font-family: 'Exo 2', sans-serif;
+        }
+    tr{
+        height:442px;
+        td{
+          height:302px;
+          width:252px;
+          vertical-align:top;
+          padding:20px 20px 0px 28px;
+          img{
+              display: block;
+              width:240px;
+              height: 240px;
+          }
+          p{
+            padding-top:10px;
+            width:240px;
+            font-size: 12px;
+            overflow: hidden;
+            span{
+            display: block;
+            font-weight: 600;
+            padding-top: 3px;
+            font-size: 20px;
+            }  
+          }  
+        }
+    }
+}
+
+//----------------------------------商品列表页---------------------------------
+
