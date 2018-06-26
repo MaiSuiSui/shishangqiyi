@@ -40,20 +40,16 @@ gulp.task("copy-icofont",function(){
 })
 /*------------------------拷贝合并压缩js&es6.js=>>es5.js---------------------------*/
 gulp.task("babel",function(){
-	gulp.src('js/es6.js')
-	.pipe(babel({"presets":["es2015"]}))
-	.pipe(rename("commin.js"))
+	gulp.src(['js/*.js','!js/jquery-1.11.0.js'])
+	//.pipe(babel({"presets":["es2015"]}))
 	.pipe(gulp.dest('dist/js'))
 	.pipe(connect.reload());
 })
 
 gulp.task("scripts",function(){
 	gulp.src('js/jquery-1.11.0.js')
-	//.pipe(concat('verdor.js'))
-	//.pipe(gulp.dest('dist/js'))
-	//.pipe(babel({"presets":["es2015"]}))
-	.pipe(uglify())
-	.pipe(rename('jQuery.min.js'))
+//	.pipe(uglify())
+//	.pipe(rename('jQuery.min.js'))
 	.pipe(gulp.dest('dist/js'))
 	.pipe(connect.reload());
 })
@@ -64,9 +60,10 @@ gulp.task('watch',function(){
 	gulp.watch('img/**',['images']);
 	gulp.watch('scss/**',['sass']);
 	gulp.watch('icofont/**',['copy-icofont']);
-	gulp.watch('js/es6.js',['babel']);
-	gulp.watch('js/**',['scripts'])
+	gulp.watch('js/*.js',['babel']);
+	gulp.watch('js/**',['scripts']);
 	gulp.watch('data/**',['copy-data']);
+	
 })
 /*------------------------Es6a转Es5-------------------------------------------*/
 

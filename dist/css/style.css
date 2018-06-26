@@ -402,8 +402,7 @@
     padding: 50px 0 0 25px;
     font-weight: 200;
     color: #000000;
-    font-size: 30px;
-    background: paleturquoise; }
+    font-size: 30px; }
   #detail-table #tabel-two {
     width: 1185px;
     height: 413px;
@@ -411,8 +410,7 @@
     #detail-table #tabel-two #tabel-two-left {
       width: 288px;
       height: 355px;
-      padding: 29px 42.5px 29px 42.5px;
-      background: pink; }
+      padding: 29px 42.5px 29px 42.5px; }
       #detail-table #tabel-two #tabel-two-left img {
         display: block;
         width: 288px;
