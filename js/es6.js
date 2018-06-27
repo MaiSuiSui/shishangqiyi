@@ -39,9 +39,40 @@
 					alert("账号密码错误");
 				}
 				else{
+					$.cookie("username",data.userID,{expires:7,path:"/"});
 					window.location.href = "../index.html";
 				}
 			})
 		})
+/**********************************首页的js*******************************/
+		
+		$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",function(data){
+			var data = data;
+			var str ="";
+			for(var i=0;i<data.length;i++){
+				if((i+1)%4==0&&i!=0){//创建tr
+					str += "<td><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></td>" 
+					var oTr=document.createElement("tr");
+					//console.log($("#center-wrap #center-clothing")[0])
+					oTr.innerHTML += str;
+					
+					$("#center-wrap #center-clothing")[0].appendChild(oTr);
+					
+					str = "";
+				}else{
+					str += "<td><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></td>"
+					
+				}
+			}
+		})
+/****************调出分类*******************/		
+		$.getJSON("http://datainfo.duapp.com/shopdata/getclass.php",function(data){
+			var str = "";
+			$.each(data,function(index,item){
+				str += `<li><a href="html/productlist.html?classID=${item.classID}">${item.className}</a></li>`;
+			})
+			$("#header")[0].innerHTML += str;
+		})	
+		
 	})
 })();

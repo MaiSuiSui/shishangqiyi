@@ -61,7 +61,7 @@ gulp.task('watch',function(){
 	gulp.watch('scss/**',['sass']);
 	gulp.watch('icofont/**',['copy-icofont']);
 	gulp.watch('js/*.js',['babel']);
-	gulp.watch('js/**',['scripts']);
+	gulp.watch(['js/*.js','!js/jquery-1.11.0.js'],['scripts']);
 	gulp.watch('data/**',['copy-data']);
 	
 })
