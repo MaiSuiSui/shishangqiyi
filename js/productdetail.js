@@ -6,7 +6,7 @@
 			var str ="";
 			for(var i=0;i<data.length;i++){
 				if((i+1)%4==0&&i!=0){//创建tr
-					str += "<td><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></td>" 
+					str += "<td><a href='detail.html?id="+data[i].goodsID+"'><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></a></td>"; 
 					var oTr=document.createElement("tr");
 					oTr.innerHTML += str;
 					$("#product-wrap table")[0].appendChild(oTr);

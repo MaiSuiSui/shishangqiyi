@@ -5,7 +5,7 @@
   font-family: 'Exo 2', sans-serif; }
 
 #center-wrap {
-  height: 2300px; }
+  height: 11057px; }
 
 #center-clothing, #center-cosmetics, #center-bast, #center-four, #detail-one, #detail-image, #detail-table, #cart-content {
   margin: 0 auto; }
@@ -31,22 +31,25 @@
       width: 300px;
       height: 534px;
       vertical-align: top;
-      border-collapse: collapse;
-      border: 1px solid #000; }
-      #center-clothing tr td img {
-        display: inline-block;
-        width: 290px;
-        height: 380px; }
-      #center-clothing tr td p {
-        padding-top: 10px;
-        width: 240px;
-        font-size: 12px;
-        overflow: hidden; }
-        #center-clothing tr td p span {
-          display: block;
-          font-weight: 600;
-          padding-top: 3px;
-          font-size: 24px; }
+      border-collapse: collapse; }
+      #center-clothing tr td a {
+        font-size: 24px;
+        font-family: 'Exo 2', sans-serif;
+        color: #333333; }
+        #center-clothing tr td a img {
+          display: inline-block;
+          width: 290px;
+          height: 380px; }
+        #center-clothing tr td a p {
+          padding-top: 10px;
+          width: 240px;
+          font-size: 12px;
+          overflow: hidden; }
+          #center-clothing tr td a p span {
+            display: block;
+            font-weight: 600;
+            padding-top: 3px;
+            font-size: 24px; }
 
 #center-cosmetics {
   width: 1200px;
@@ -235,6 +238,44 @@
       border-radius: 20px;
       margin: 50px auto auto 20px;
       border: 1px solid #969896; }
+    #detail-one #detail-select #detail-cart {
+      width: 250px;
+      height: 50px;
+      border: 1px solid #333333;
+      margin-left: 20px;
+      margin-top: 20px; }
+      #detail-one #detail-select #detail-cart span {
+        float: left; }
+      #detail-one #detail-select #detail-cart #cart-span-one {
+        display: block;
+        width: 82px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        float: left;
+        border-right: 1px solid #333333;
+        padding: 0px;
+        margin: 0; }
+      #detail-one #detail-select #detail-cart #cart-num {
+        display: block;
+        width: 82px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        float: left;
+        padding: 0px;
+        margin: 0;
+        border: none; }
+      #detail-one #detail-select #detail-cart #cart-span-there {
+        display: block;
+        width: 82px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        float: left;
+        border-left: 1px solid #333333;
+        padding: 0px;
+        margin: 0; }
   #detail-one .detail-nav-two {
     height: 45px;
     width: 985px;
@@ -385,7 +426,7 @@
         width: 60px;
         text-align: center;
         height: 30px;
-        font-size: 30px;
+        font-size: 20px;
         border-radius: 20px;
         background: #DDDDDD;
         border: 2px solid #000; }

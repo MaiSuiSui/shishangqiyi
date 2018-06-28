@@ -47,11 +47,10 @@
 /**********************************首页的js*******************************/
 		
 		$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",function(data){
-			var data = data;
 			var str ="";
 			for(var i=0;i<data.length;i++){
 				if((i+1)%4==0&&i!=0){//创建tr
-					str += "<td><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></td>" 
+					str += "<td><a href='html/detail.html?id="+data[i].goodsID+"'><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></a></td>"; 
 					var oTr=document.createElement("tr");
 					//console.log($("#center-wrap #center-clothing")[0])
 					oTr.innerHTML += str;
@@ -60,7 +59,7 @@
 					
 					str = "";
 				}else{
-					str += "<td><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></td>"
+					str += "<td><a href='html/detail.html?id="+data[i].goodsID+"'><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></a></td>";
 					
 				}
 			}
@@ -73,6 +72,57 @@
 			})
 			$("#header")[0].innerHTML += str;
 		})	
+/****************首页添加表格*******************/	
+		/*$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",function(data){
+			
+			$.each(data,function(index,item){
+				if(index > 0){
+					var str = "";
+					for(var j=1;j<index;j++){
+						var oTabel = document.createElement("table");
+						str += "<tabel><caption>"+data[j].className+"</caption></tabel>"
+						console.log(str);
+						oTabel.innerHTML += str;
+						$("#center-wrap")[0].appendChild(oTabel);*/
+						/*for(var i=0;i<data[j].length;i++){
+							console.log(data);
+							if((i+1)%4==0&&i!=0){//创建tr
+								str += "<td><a href='html/detail.html?id="+data[i].goodsID+"'><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></a></td>"; 
+								var oTr=document.createElement("tr");
+								//console.log($("#center-wrap #center-clothing")[0])
+								oTr.innerHTML += str;
+								
+								$("#center-wrap #center-clothing")[0].appendChild(oTr);
+								
+								str = "";
+							}else{
+								str += "<td><a href='html/detail.html?id="+data[i].goodsID+"'><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></a></td>";
+						}*/
+			/*}
+					
+				}
+			})
+		})*/
+		/*$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",function(data){
+			var str ="";
+			for(var i=0;i<data.length;i++){
+				console.log(data);
+				if((i+1)%4==0&&i!=0){//创建tr
+					str += "<td><a href='html/detail.html?id="+data[i].goodsID+"'><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></a></td>"; 
+					var oTr=document.createElement("tr");
+					//console.log($("#center-wrap #center-clothing")[0])
+					oTr.innerHTML += str;
+					
+					$("#center-wrap #center-clothing")[0].appendChild(oTr);
+					
+					str = "";
+				}else{
+					str += "<td><a href='html/detail.html?id="+data[i].goodsID+"'><img src='"+data[i].goodsListImg+"'><p>"+data[i].goodsName+"</p><p><span>"+data[i].price+"</span></p></a></td>";
+					
+				}
+			}
+		})*/
+		
 		
 	})
 })();
