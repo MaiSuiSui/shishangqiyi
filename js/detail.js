@@ -24,8 +24,22 @@
 /*****************************点击添加购物车，把数量传到购物车页面****************************************/				
 /******************判断购物车里是否有此商品********************/	
 //			
+			console.log($("#btn3"))
 			$("#btn3").click(function(){
+				console.log("aa")
 				$.getJSON("http://datainfo.duapp.com/shopdata/getCar.php?callback=?",{userID:$.cookie("username")},function(data){
+					console.log(data)
+					if(data==0){
+						var addNum = Number($("#cart-num").val());
+						$.getJSON("http://datainfo.duapp.com/shopdata/updatecar.php",{userID:$.cookie("username"),goodsID:goodsid,number:addNum},function(data){
+								if(data==0){
+									alert("添加失败");
+								}
+								if(data == 1){
+									alert("添加成功")
+								}
+							})
+					}
 					$.each(data, function(index,item) {
 						if(item.goodsID == goodsid){
 							var addNum = Number(item.number)+Number($("#cart-num").val());
@@ -38,8 +52,7 @@
 									alert("添加成功")
 								}
 							})
-						}
-						
+						}else{
 							var addNum =Number($("#cart-num").val());
 							$.get("http://datainfo.duapp.com/shopdata/updatecar.php",{userID:$.cookie("username"),goodsID:goodsid,number:addNum},function(data){
 								if(data==0){
@@ -49,6 +62,9 @@
 									alert("添加成功")
 								}
 							})
+						}
+						
+							
 						
 					});
 				})

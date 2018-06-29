@@ -4,7 +4,7 @@
 					console.log(data);
 					var str = "";
 					$.each(data,function(index,item){
-						
+						//
 						str += `<div class='good'>
 						<div id="cart-left">
 								<a href="detail.html?id=${item.goodsID}">
